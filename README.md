@@ -139,8 +139,6 @@ Represents financial transactions for bookings.
 **Relationships:**
 - A payment is linked to one booking.
 
----
-
 This relational structure supports scalability, data integrity, and efficient querying for core platform features.
 
 
@@ -174,5 +172,51 @@ Integrates Prometheus and Grafana for system metrics and observability. Helps tr
 
 ---
 
-These features collectively demonstrate backend engineering, DevOps, and platform reliability skills while laying the groundwork for a scalable educational platform like Mmụta.
 
+## API Security
+
+Securing backend APIs is critical to protecting user data, maintaining system integrity, and ensuring trust in the platform. This section outlines the key security measures implemented in the AirBnB Clone project and explains their importance across different areas.
+
+### Authentication
+We use secure authentication mechanisms such as JWT (JSON Web Tokens) or OAuth2 to verify user identity. This ensures that only registered users can access protected resources and perform actions based on their roles.
+
+**Why it matters**: Prevents unauthorized access to sensitive user data and personal information.
+
+---
+
+### Authorization
+Role-Based Access Control (RBAC) is implemented to restrict actions based on user roles (e.g., host, guest, admin). Each API endpoint checks permissions before executing operations.
+
+**Why it matters**: Ensures users can only perform actions they’re allowed to, protecting property data and booking workflows.
+
+---
+
+### Rate Limiting
+Rate limiting is applied to prevent abuse of the API by limiting the number of requests per user/IP within a time window. Tools like Flask-Limiter or API Gateway throttling are used.
+
+**Why it matters**: Protects the system from denial-of-service (DoS) attacks and ensures fair usage of resources.
+
+---
+
+### 🔒 Data Encryption
+Sensitive data such as passwords are hashed using secure algorithms (e.g., bcrypt). Communication between client and server is encrypted using HTTPS.
+
+**Why it matters**: Prevents data leaks and protects user credentials and payment information during transmission.
+
+---
+
+### Input Validation & Sanitization
+All incoming data is validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS). Framework-level protections and custom validators are used.
+
+**Why it matters**: Ensures system integrity and protects against malicious payloads.
+
+---
+
+### Secure Payments (Simulated)
+Although real payment gateways are not integrated, mock transactions are handled securely with proper status tracking and user verification.
+
+**Why it matters**: Builds a foundation for future integration with real payment systems and protects financial workflows.
+
+---
+
+These security measures collectively ensure that the AirBnB Clone backend is resilient, trustworthy, and ready for real-world deployment.
