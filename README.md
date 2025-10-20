@@ -220,3 +220,20 @@ Although real payment gateways are not integrated, mock transactions are handled
 ---
 
 These security measures collectively ensure that the AirBnB Clone backend is resilient, trustworthy, and ready for real-world deployment.
+
+
+## CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of building, testing, and deploying code. They ensure that every code change is validated through automated tests and seamlessly delivered to production or staging environments without manual intervention.
+
+For the AirBnB Clone project, CI/CD pipelines help maintain code quality, reduce human error, and accelerate development cycles. They allow us to catch bugs early, enforce coding standards, and deploy updates reliably.
+
+### 🛠️ Tools Used
+
+- **GitHub Actions**: Automates testing, linting, and deployment workflows triggered by code changes.
+- **Docker**: Containerizes the application for consistent environments across development, testing, and production.
+- **Terraform**: Manages cloud infrastructure as code, enabling reproducible and scalable deployments.
+- **AWS**: Hosts the application and supports scalable cloud-native deployment.
+- **Robot Framework**: Executes automated test suites as part of the CI pipeline.
+
+These tools work together to streamline development and ensure that every feature is delivered with confidence and speed.
