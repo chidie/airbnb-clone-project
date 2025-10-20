@@ -142,3 +142,37 @@ Represents financial transactions for bookings.
 ---
 
 This relational structure supports scalability, data integrity, and efficient querying for core platform features.
+
+
+## Feature Breakdown
+
+This section outlines the core features implemented in the AirBnB Clone project. Each feature is designed to replicate key functionalities of the original platform while showcasing backend development, testing, and deployment skills.
+
+### User Management
+Handles user registration, authentication, and role-based access control. Supports secure login using hashed passwords and distinguishes between hosts and guests for personalized experiences.
+
+### Property Management
+Allows hosts to create, update, and delete property listings. Each listing includes details such as title, description, location, and availability, enabling guests to browse and book accommodations.
+
+### Booking System
+Enables guests to book available properties for specific dates. Includes conflict detection, booking history, and integration with payment processing to simulate real-world reservation workflows.
+
+### Review System
+Allows users to leave ratings and comments on properties they’ve stayed in. Helps build trust and transparency by surfacing feedback from previous guests.
+
+### Payment Integration
+Simulates payment processing for bookings using mock transactions. Tracks payment status, method, and amount, laying the foundation for future integration with real payment gateways.
+
+### Authentication & Authorization
+Implements secure login and access control using JWT or OAuth2. Ensures that only authorized users can perform actions based on their roles (e.g., host vs guest).
+
+### CI/CD & Deployment
+Automates testing and deployment using GitHub Actions, Docker, and Terraform. Supports scalable cloud deployment and infrastructure as code for reproducible environments.
+
+### Monitoring & Logging (Optional)
+Integrates Prometheus and Grafana for system metrics and observability. Helps track uptime, performance, and error rates to support future SRE practices.
+
+---
+
+These features collectively demonstrate backend engineering, DevOps, and platform reliability skills while laying the groundwork for a scalable educational platform like Mmụta.
+
