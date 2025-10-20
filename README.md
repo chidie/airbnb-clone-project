@@ -14,10 +14,10 @@ This project is part of the ALX Pro Dev Software Engineering (Backend) program a
 - Deploy the application using Docker and cloud-native tools
 - Practice infrastructure as code and monitoring strategies
 
-## Tech Stack
+## Technology Stack
 
 - **Language**: Python
-- **Framework**: Flask
+- **Framework**: Django
 - **Database**: MySQL or SQLite (depending on environment)
 - **Testing**: Unittest, Robot Framework
 - **Containerization**: Docker
@@ -30,7 +30,7 @@ This project is part of the ALX Pro Dev Software Engineering (Backend) program a
 
 To clone the repository:
 
->> git clone https://github.com/<your-username>/airbnb-clone-project.git
+> git clone https://github.com/<your-username>/airbnb-clone-project.git
 
 ## 👥 Team Roles
 
@@ -54,3 +54,91 @@ Focuses on system reliability, observability, and incident response. Implements 
 ### Project Manager / Scrum Master
 Coordinates tasks, timelines, and team communication. Facilitates Agile ceremonies, removes blockers, and ensures alignment with project goals. Tracks progress and fosters collaboration across roles.
 
+
+## Database Design
+
+This section outlines the core entities and relationships in the AirBnB Clone backend system. The database is designed to support user management, property listings, bookings, reviews, and payments.
+
+### 👤 Users
+Represents individuals using the platform, either as hosts or guests.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `name`
+- `email`
+- `password_hash`
+- `role` (e.g., host, guest)
+
+**Relationships:**
+- A user can list multiple properties.
+- A user can make multiple bookings.
+- A user can leave multiple reviews.
+
+---
+
+### Properties
+Represents accommodations listed by hosts.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `title`
+- `description`
+- `location`
+- `host_id` (Foreign Key -> Users)
+
+**Relationships:**
+- A property belongs to one host (user).
+- A property can have multiple bookings.
+- A property can have multiple reviews.
+
+---
+
+### Bookings
+Represents reservations made by guests.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `start_date`
+- `end_date`
+
+**Relationships:**
+- A booking is made by one user.
+- A booking is for one property.
+- A booking may be linked to a payment.
+
+---
+
+### Reviews
+Represents feedback left by users about properties.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key -> Users)
+- `property_id` (Foreign Key -> Properties)
+- `rating` (e.g., 1–5)
+- `comment`
+
+**Relationships:**
+- A review is written by one user.
+- A review is about one property.
+
+---
+
+### Payments
+Represents financial transactions for bookings.
+
+**Key Fields:**
+- `id` (Primary Key)
+- `booking_id` (Foreign Key -> Bookings)
+- `amount`
+- `payment_method`
+- `status` (e.g., pending, completed)
+
+**Relationships:**
+- A payment is linked to one booking.
+
+---
+
+This relational structure supports scalability, data integrity, and efficient querying for core platform features.
