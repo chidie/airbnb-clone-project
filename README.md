@@ -29,5 +29,28 @@ This project is part of the ALX Pro Dev Software Engineering (Backend) program a
 ## 🚀 Getting Started
 
 To clone the repository:
-```bash
-git clone https://github.com/<your-username>/airbnb-clone-project.git
+
+>> git clone https://github.com/<your-username>/airbnb-clone-project.git
+
+## 👥 Team Roles
+
+This section outlines the key roles and responsibilities within the AirBnB Clone project. Each role contributes to building a scalable, reliable, and user-friendly backend system.
+
+### Backend Developer
+Responsible for designing and implementing the core application logic, RESTful APIs, and server-side functionality. Ensures code quality, modularity, and performance. Collaborates with other roles to integrate features and maintain system reliability.
+
+### Database Administrator (DBA)
+Manages the database schema, relationships, indexing, and performance tuning. Ensures data integrity, backups, and secure access. Works closely with backend developers to optimize queries and support multi-tenant architecture.
+
+### QA/Test Automation Engineer
+Designs and maintains automated test suites using tools like Robot Framework, Cypress, and Unittest. Validates functionality, performance, and edge cases. Integrates testing into CI/CD pipelines to ensure continuous quality.
+
+### DevOps Engineer
+Sets up and maintains CI/CD pipelines, containerization (Docker), and cloud deployment strategies (AWS, Terraform). Automates infrastructure provisioning and monitors system health. Ensures scalability, fault tolerance, and fast delivery cycles.
+
+### SRE (Site Reliability Engineer)
+Focuses on system reliability, observability, and incident response. Implements monitoring tools (Prometheus, Grafana), defines SLIs/SLOs, and conducts chaos testing. Bridges development and operations to maintain uptime and performance.
+
+### Project Manager / Scrum Master
+Coordinates tasks, timelines, and team communication. Facilitates Agile ceremonies, removes blockers, and ensures alignment with project goals. Tracks progress and fosters collaboration across roles.
+
